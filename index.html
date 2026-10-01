@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeighbourMeal — Home-cooked food from neighbours</title>
+  <meta name="description" content="Share homemade food, spread happiness in your community. Order from local home cooks or sell your own dishes.">
+  <meta property="og:title" content="NeighbourMeal">
+  <meta property="og:description" content="Home-cooked food from neighbours">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#2E7D32">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #2E7D32;
+      --primary-light: #4CAF50;
+      --primary-dark: #1B5E20;
+      --accent: #FF9800;
+      --bg: #F1F8E9;
+      --card: #FFFFFF;
+      --text: #1B5E20;
+      --text-light: #4E7D4E;
+      --border: #C8E6C9;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --primary: #66BB6A;
+        --primary-light: #81C784;
+        --primary-dark: #4CAF50;
+        --accent: #FFB74D;
+        --bg: #1B5E20;
+        --card: #2E7D32;
+        --text: #E8F5E9;
+        --text-light: #A5D6A7;
+        --border: #388E3C;
+      }
+    }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column; }
+    header { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: white; padding: 3rem 1.5rem; text-align: center; }
+    .logo { width: 80px; height: 80px; border-radius: 20px; background: white; display: inline-flex; align-items: center; justify-content: center; font-size: 2.5rem; margin-bottom: 1rem; box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+    h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .tagline { font-size: 1.25rem; opacity: 0.9; max-width: 500px; margin: 0 auto; }
+    main { flex: 1; padding: 3rem 1.5rem; max-width: 800px; margin: 0 auto; width: 100%; }
+    .section { margin-bottom: 3rem; }
+    .section h2 { font-size: 1.75rem; margin-bottom: 1.5rem; color: var(--primary); }
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; transition: transform 0.2s, box-shadow 0.2s; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.1); }
+    .card-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+    .card h3 { font-size: 1.15rem; margin-bottom: 0.5rem; color: var(--text); }
+    .card p { color: var(--text-light); font-size: 0.95rem; }
+    .download-section { text-align: center; background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 3rem 2rem; }
+    .download-section h2 { color: var(--text); }
+    .play-badge { display: inline-block; margin-top: 1.5rem; }
+    .play-badge img { height: 60px; width: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.15); transition: transform 0.2s; }
+    .play-badge img:hover { transform: scale(1.03); }
+    .trust { display: flex; justify-content: center; gap: 2rem; margin-top: 2rem; flex-wrap: wrap; color: var(--text-light); font-size: 0.9rem; }
+    .trust-item { display: flex; align-items: center; gap: 0.5rem; }
+    footer { background: var(--primary-dark); color: white; padding: 2rem 1.5rem; text-align: center; }
+    footer a { color: #C8E6C9; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    .contact { margin-top: 1rem; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">🍲</div>
+    <h1>NeighbourMeal</h1>
+    <p class="tagline">Home-cooked food from neighbours. Share homemade meals, spread happiness in your community.</p>
+  </header>
+  <main>
+    <section class="section">
+      <h2>How it works</h2>
+      <div class="features">
+        <article class="card">
+          <div class="card-icon">🍳</div>
+          <h3>For Food Lovers</h3>
+          <p>Discover authentic home-cooked meals from verified cooks nearby. Order, pick up, enjoy.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">👨‍🍳</div>
+          <h3>For Home Cooks</h3>
+          <p>Turn your cooking into income. List dishes, set prices, serve your neighbourhood.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🔒</div>
+          <h3>Safe & Regulated</h3>
+          <p>Food safety onboarding, local authority registration, secure Stripe payments.</p>
+        </article>
+      </div>
+    </section>
+    <section class="section download-section">
+      <h2>Get the App</h2>
+      <p style="margin: 1rem 0; color: var(--text-light);">Available on Android. iOS coming soon.</p>
+      <a class="play-badge" href="https://play.google.com/store/apps/details?id=com.neighbourmeal.app" target="_blank" rel="noopener">
+        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
+      </a>
+      <div class="trust">
+        <span class="trust-item">🛡️ Secure payments via Stripe</span>
+        <span class="trust-item">🍽️ Food safety certified</span>
+        <span class="trust-item">⭐ Community rated</span>
+      </div>
+    </section>
+    <section class="section">
+      <h2>For Providers</h2>
+      <div class="features">
+        <article class="card">
+          <div class="card-icon">💰</div>
+          <h3>Transparent Earnings</h3>
+          <p>15% platform fee. You keep 85%. Instant payouts via Stripe Connect Express.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">📊</div>
+          <h3>Dashboard</h3>
+          <p>Manage orders, track earnings, update menus — all from your phone.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2026 NeighbourMeal. Good Food ♥ Better Together</p>
+    <div class="contact">
+      <a href="mailto:hello@neighbourmeal.app">hello@neighbourmeal.app</a> ·
+      <a href="https://github.com/yourusername/neighbourmeal">GitHub</a>
+    </div>
+  </footer>
+</body>
+</html>
